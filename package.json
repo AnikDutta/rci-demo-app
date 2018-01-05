@@ -4,6 +4,7 @@
   "description": "RCI DEMO APPLICATION",
   "main": "app.js",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-loadable": "^5.3.1"

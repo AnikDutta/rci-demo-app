@@ -1,5 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import "babel-polyfill";
+
 const paths = {
     DIST: path.resolve(__dirname, 'dist'),
     SRC: path.resolve(__dirname, 'src')
@@ -7,7 +9,7 @@ const paths = {
   
   // Webpack configuration
   module.exports = {
-    entry: path.join(paths.SRC, 'index.js'),
+    entry: [ "babel-polyfill", path.join(paths.SRC, 'index.js') ],
     output: {
       path: paths.DIST,
       filename: 'app.bundle.js' 
